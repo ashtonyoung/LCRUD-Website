@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AshtonYoung.Music</title>
+    <link href="/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav id="nav" class="main-nav">
+        <ul>
+          <li><a id="homeBtn" href="#">Home</a></li>
+          <li><a id="curriculumBtn" href="#">Lessons<i class="fas fa-guitar"></i></a></li>
+          <li><a id="pricingBtn" href="#">My Music<i class="fas fa-music"></i></a></li>
+          <li><a id="contactBtn" href="#">Contact<i class="fas fa-address-card"></i></a></li>
+          <li><a id="mediaBtn" href="#">Media<i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </nav>
+      <header id="header">
+        <h2>ASHTONYOUNG.MUSIC</h2>
+        <!-- <h2><i class="fas fa-headphones"></i></h2> -->
+      </header>
+      <section id="home">
+          <div class="pageHeader">
+              <h1>.Music</h1>
+              <p>Become dedicated to music. Includes lesson information, original music, and a gallery of performances.</p>
+          </div>
+          <div class="pageBody">
+            <h2>Guitar Lessons</h2>
+            <p>Guitar lessons customized to help you pursue your musical goals</p>
+            <h2>My Music</h2>
+            <p>Contains a concise display of some of my music projects</p>
+            <h2>Contact</h2>
+            <p>Contact me or submit a form for me to follow up on</p>
+            <h2>Media</h2>
+            <p>A display of educational YouTube content</p>
+          </div>
+      </section>
+      <section id="curriculum">
+          <div class="pageHeader" id="lessonsHeader">
+              <h1>Lessons</h1>
+              <p>Learn to play guitar</p>
+          </div>
+          <div class="pageBody">
+            <h2>Curriculum</h2>
+              <p>Teaching all skill levels from a variety of ages. Lesson plans are oriented around what your interests are. I'll provide you with training in skills such as learning chord shapes, scales, arpeggio structures, ear training, transcription, reading chord charts, improvisation, arranging, and live performance.</p>
+              <h2>Location</h2>
+              <p>Guitar lessons are offered from my home studio, located near the mouth of Provo Canyon. Online lessons are available as well through a video conferencing software of your choice.</p>
+              <h2>Schedule</h2>
+              <p>Currently teaching from 3:00pm - 7:00pm, Monday through Thursday.</p>
+              <h2>Pricing</h2>
+              <p>Lessons are $25 for a half-hour timeslot, however, hour time slots are available for $45.</p>
+          </div>
+      </section>
+      <section id="pricing">
+          <div class="pageHeader" id="musicHeader">
+              <h1>My Music</h1>
+              <p>Embedded SoundCloud projects found here</p>
+          </div>
+          <div class="pageBody" id="soundcloudWrapper">
+              <iframe width="25%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/476757732&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><a href="https://soundcloud.com/ashton-young" title="Ashton Young" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/ashton-young/let-it-happen" title="Let It Happen" target="_blank" style="color: #cccccc; text-decoration: none;"></a>
+              <iframe width="25%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/490677390&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><a href="https://soundcloud.com/ashton-young" title="Ashton Young" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/ashton-young/sorrow" title="उदास | SORROW" target="_blank" style="color: #cccccc; text-decoration: none;"></a>
+              <iframe width="25%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/263698611&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><a href="https://soundcloud.com/ashton-young" title="Ashton Young" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/ashton-young/sad-5-wasteland-haven" title="SAD - #5 Wasteland / Haven" target="_blank" style="color: #cccccc; text-decoration: none;"></a>
+          </div>
+      </section>
+      <section id="contact">
+          <div class="pageHeader" id="contactHeader">
+            <h1>Contact</h1>
+            <p>How to get in touch with me</p>
+          </div>
+          <div class="pageBody">
+            <div id="formWrapper">
+              <div id="formContainer">
+              <h2>Visitor Form</h2>
+              <h2 style="display:none" id="successMessage">Submission Received. Thank you!</h2>
+              <form id="myForm" novalidate>
+                <div id="ulWrapper">
+                    <ul id="formUl">
+                      <li>
+                        <h3>Personal Info</h3>
+                      </li>
+                      <li>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" id="firstName">
+                        <div id="firstNameErr" class="errorMsg">First Name is required</div>
+                      </li>
+                      <li>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName">
+                        <div id="lastNameErr" class="errorMsg">Last Name is required</div>
+                      </li>
+                      <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                        <div id="emailErr" class="errorMsg">Email is required</div>
+                      </li>
+                      <li>
+                        <label for="phone">Phone:</label>
+                        <input type="phone" name="phone" id="phone">
+                        <div id="phoneErr" class="errorMsg">Phone is required</div>
+                      </li>
+                      <li>
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address">
+                        <div id="addressErr" class="errorMsg">Address is required</div>
+                      </li>
+                      <li>
+                        <label for="city">City:</label>
+                        <input type="text" name="city" id="city">
+                        <div id="cityErr" class="errorMsg">City is required</div>
+                      </li>
+                      <li>
+                        <label for="zip">Zip Code:</label>
+                        <input type="text" name="zip" id="zip" maxlength="5">
+                        <div id="zipErr" class="errorMsg">Zip Code is Required.</div>
+                        <div id="zipFormat" class="errorMsg">Zip Code Needs to Be 5 Digits.</div>
+                      </li>
+                      <li>
+                        <label for="state">State:</label>
+                        <input type="text" name="state" id="state" maxlength="2" placeholder="UT, NY, AZ, ...">
+                        <div id="stateErr" class="errorMsg">State is Required.</div>
+                        <div id="stateNotFound" class="errorMsg">Invalid State Code</div>
+                      </li>
+                      </ul>
+                      <ul id="formUl2">
+                      <li>
+                        <h3>How did you find my page?</h3>
+                      </li>
+                      <div id="checkboxWrapper">
+                      <li>
+                        <label for="instagram">Instagram</label>
+                        
+                        <input type="checkbox" name="find-page" id="instagram" value="instagram">
+                      </li>
+                      <li>
+                        <label for="youtube">YouTube</label>
+                        <input type="checkbox" name="find-page" id="youtube" value="youtube">
+                      </li>
+                      <li>
+                        <label for="other">Other</label>
+                        <input type="checkbox" name="find-page" id="other" value="other">
+                        </li>
+                        
+                      </div>
+                      <li>
+                        <div id="checkboxErr" class="errorMsg">You must check at least one</div>
+                      </li>
+                      <li id="commentLi">
+                        <label for="comments">Comments</label>
+                        </li>
+                        <li>
+                        <textarea name="comments" id="comments" cols="42" rows="5"></textarea>
+                      </li>
+                      <li>
+                        <button type="submit" id="formSubmit" class="formButton">Submit</button>
+                        <button id="formCancel" class="formButton">Cancel</button>
+                      </li>
+                  </ul>
+                </div>
+              </form>
+              </div>
+              <div id="visitorsContainer">
+                <h2 class="tableTitle">Visitors List:</h2>
+                <table id="visitorsTable" cellspacing="0">
+                  <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th id="idColumn">ID</th>
+                    <th>Actions</th>
+                  </table>
+                <div class="pButton" id="newVisitorButton">New Visitor</div>
+              </div>
+            </div>
+            <div id="contactContainer">
+            <h2>Contact Info:</h2>
+            <h3 class="contactH3">Phone Number</h3>
+              <p>801-636-5794</p>
+              <h3 class="contactH3">Email</h3>
+              <p>ashtonyoungguitar@gmail.com</p>
+              <h3 class="contactH3">Social Media</h3>
+              <a href="https://www.youtube.com/channel/UCxPLjIG0tnKq2oYd4WKuqwQ" target="_blank">Youtube</a>
+              <a href="https://www.instagram.com/ashtonyounq/" target="_blank">Instagram</a>
+          </div>
+          </div>
+      </section>
+      <section id="media">
+          <div class="pageHeader" id="mediaHeader">
+              <h1>Media</h1>
+              <p>Links to my youtube channel, which is where most educational music-related content is hosted.</p>
+            </div>
+            <div class="pageBody">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/cd8iUEnLM6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/4daRNDaYq9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/FTVSzfcyNOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </section>
+      <footer id="footer">
+          <p>Ashton Young &copy; 2021</p>
+          <p href="" id="altCssButton" class="pButton">Toggle Dark Mode</p>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="  crossorigin="anonymous"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/model.js"></script>
+    <script src="/js/view.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e6c463f48.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

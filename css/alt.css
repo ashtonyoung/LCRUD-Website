@@ -1,0 +1,43 @@
+/* THEME OPERATIONS
+    Dark Mode:
+        Activates/Deactivates when the button is pushed located in the footer
+            Darker colors are flipped to lighter colors in :root variables
+            Lighter colors are flipped to darker colors in :root variables
+            Certain elements use an even lighter color using new variable var(--h1) to stand out in dark mode
+            Header points to a new background image that better fits with dark mode
+        Dark Mode is applied to ALL text elements EXCEPT for the pageHeader content
+        since it is placed over an already dark image background
+    Although the changes are not extensive, the wide use of variables in the 
+    main.css means that the colors alter the look of the entire page.*/
+
+:root {
+    --primary: #333;
+    --dark: #ddd;
+    --lessDark: #aaa;
+    --darkTrans: rgba(51, 51, 51, 0.404);
+    --light: #222;
+    --shadow: 0 1px 5px rgba(20, 20, 20, 20);
+    --background: #444;
+    --h1: #ddd;
+    --green: rgb(95, 207, 110);
+}
+
+h1{
+    color: var(--h1)
+}
+.pageHeader p {
+    color: var(--h1);
+    border-color: var(--h1);
+}
+.pageHeader h2 {
+    color: var(--h1);
+    border-color: var(--h1);
+}
+
+#header{
+    background-image: url("/img/ashtonGuitar.jpg");
+}
+
+#visitorsTable{
+    background-color: #555;
+}

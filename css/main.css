@@ -1,0 +1,571 @@
+
+/* CSS CHANGELIST
+    Altered Each Page Section:
+        Split single div into two divs:
+            pageHeader     (contains photo and title)
+            pageBody        (contains informational text)
+        Added padding to all sides of pageBody to centralize text
+        Shortened min-height of pageHeader
+        Added border to pageHeader photo
+        Added Dark text to light background to allow for a more
+        adapative dark mode toggle function
+    Adjusted "My Music" iframe sizing
+        Aligned iframes in a more pleasing way using flexbox
+    Revamped the header:
+        Added a subtle bakground photo
+        Added a subtle enclosing border
+        Changed text style
+        Hide text by default, show on hover
+        Made it responsive to Dark Mode Toggle
+    Adjusted responsive window sizing:
+        Responsive changes kicks in earlier to prevent unwanted display
+    Added more color variables and implemented them to allow for more responsive
+    dark mode feature*/
+
+/* VARIABLES */
+
+:root {
+    --primary: #eee;
+    --dark: #333;
+    --lessDark: #666;
+    --darkTrans: rgba(51, 51, 51, 0.404);
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 104);
+    --background: #ddd;
+    --transparent: rgba(0, 0, 0, 0);
+    --green: rgb(0, 139, 19);
+}
+
+/* BASE */
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: var(--background);
+    margin: 10px 0px 0px 0px;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* GRID */
+
+.wrapper{
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+        "nav header"
+        "section section"
+        "footer footer"
+}
+
+/* NAV */
+
+.main-nav ul {
+    display: flex;
+    padding: 0;
+    margin: 10px;
+    list-style: none;
+    justify-content: left;
+    align-content: center;
+}
+
+.main-nav li {
+    min-width: 20%;
+}
+
+.main-nav a {
+    display: flex;
+    /* min-width: 120px; */
+    /* min-height: 50px; */
+    /* margin: 10px 0px; */
+    /* min-height: 100%; */
+    padding: 13px 0px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: var(--primary);
+    text-decoration: none;
+    /* padding: 1.3rem 1.3rem; */
+    /* text-align: left; */
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.main-nav i{
+    /* max-height: 1rem; */
+    display: inline-block;
+    vertical-align: bottom;
+    align-self: center;
+}
+
+.main-nav a:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+#homeBtn {
+    /* min-width: 200px; */
+    font-weight: bold;
+}
+
+section {
+    grid-area: section;
+}
+
+/* HOME */
+
+.pageHeader {
+    background-image: url("../img/guitarWallEditComp.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 25px;
+}
+
+.pageBody {
+    background-color: var(--background);
+    min-height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 25px;
+
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    font-size: 5rem;
+    align-self: flex-start;
+    /* background-color: var(--darkTrans); */
+    margin: 15px 15px 0px 15px;
+    color: var(--primary);
+    flex-basis: 50%;
+    padding: 0px;
+    /* text-transform: uppercase; */
+}
+
+section h2 {
+    color: var(--dark);
+    margin: 25px 15px 0px 25px;
+    font-size: xx-large;
+}
+
+.pageBody p{
+    /* background-color: var(--primary); */
+    margin: 0px 120px 0px 25px;
+    color: var(--dark);
+    font-size: large;
+    border-bottom: var(--dark) 1px solid;
+    padding-bottom: 15px;
+}
+.pageHeader p{
+    /* background-color: var(--primary); */
+    margin: 0px 120px 0px 25px;
+    color: var(--light);
+    font-size: large;
+    /* border-bottom: var(--light) 1px solid; */
+    padding-bottom: 15px;
+    display: inline;
+}
+section p{
+    /* background-color: var(--primary); */
+    margin: 10px 120px 0px 25px;
+    color: var(--dark);
+    font-size: large;
+    /* border-bottom: var(--dark) 1px solid; */
+    padding-bottom: 15px;
+}
+
+/* LESSONS */
+
+#lessonsHeader {
+    background: url("../img/holdingGuitarEditComp.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+/* MY MUSIC */
+
+#musicHeader {
+    background-image: url("../img/concertEditComp.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+#pricing iframe {
+    margin: 0px 10px;
+    /* min-width: 200px; */
+    /* max-width: 40%;
+    max-height: 30%; */
+    /* flex-basis: 100%; */
+}
+
+#soundcloudWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#pricing h1{
+    flex-basis: 100%;
+}
+#pricing p{
+    flex-basis: 100%;
+}
+
+/* CONTACT */
+
+#contactHeader{
+    background-image: url("../img/guitarCouchEditComp.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: top;
+}
+
+#contact a{
+    background: var(--primary);
+    text-decoration: none;
+    padding: 1.3rem 1.3rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+    margin: 5px 25px;
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+#contact a:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.contactH3{
+    margin: 10px 0px 0px 25px;
+}
+
+/* MEDIA */
+
+#media iframe {
+    justify-self: right;
+    margin: 15px 25px;
+}
+
+#mediaHeader {
+    background: url("../img/tanktopGuitarEditComp.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.wrapper > *:not(nav) {
+    /* background-color:rgba(255, 255, 255, 0.246); */
+    background-color: var(--primary);
+    border: 5 solid black;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    /* box-shadow: var(--shadow); */
+    background-color: none;
+    margin: 10px;
+    border: 1px solid var(--primary);
+    /* border-right: 3px solid var(--dark); */
+}
+
+#header h2{
+    padding: 5px;
+    margin: 0px;
+    align-self: center;
+    background-color: none;
+    color: var(--transparent);
+    font-style: italic;
+}
+#header h2:hover{
+    color: var(--dark)
+}
+
+#header {
+    min-width: 30%;
+    background: url("/img/ashtonGuitarLight.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    grid-area: nav;
+    max-height: 75px;
+}
+
+aside {
+    grid-area: aside;
+    text-align: center;
+    vertical-align: center;
+}
+
+/* FOOTER */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    align-content: bottom;
+    padding: 0px 25px;
+}
+
+#footer{
+    color: var(--dark);
+    background-color: var(--primary);
+}
+
+footer p{
+    margin: 20px;
+    align-self: center;
+}
+
+/* #altCssButton {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#altCssButton:hover {
+    color: var(--primary);
+    background-color: var(--dark);
+    cursor:pointer 
+} */
+
+.pButton {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+.pButton:hover {
+    color: var(--primary);
+    background-color: var(--dark);
+    cursor:pointer 
+}
+
+/* FORM VALIDATION */
+
+.errorMsg {
+    color: red;
+}
+
+#successMessage {
+    color: #111;
+    /* background-color: var(--light); */
+    border: 1px solid black;
+    padding: 70px;
+    background-color: lightgreen
+}
+
+ul {
+    list-style-type: none;
+}
+
+label{
+    font-size: 1.2rem;
+
+}
+
+#formUl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 350px;
+    /* align-content: center; */
+    align-content: left;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* max-height: 320px; */
+}
+#formUl2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 350px;
+    /* align-content: center; */
+    align-content: left;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* max-height: 320px; */
+}
+
+#formUl li{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    /* justify-content: space-between; */
+}
+#formUl2 li{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+}
+
+#checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 130px;
+    margin: 0px 0px 15px 0px;
+}
+
+#checkboxErr{
+    flex-basis: 100%;
+}
+
+#formUl input {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px 15px 15px 0px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: var(--light);
+    color: var(--dark)
+}
+
+#formUl2 {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.errorMsg {
+    margin: -10px 0px 10px 0px;
+}
+
+textarea {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    /* margin: 0px 15px 15px 0px; */
+    border-radius: 5px;
+    border: 1px solid black;
+    background: var(--light);
+    color: var(--dark)
+}
+
+.formButton{    /*Sumbit Btn*/
+     width: 100%;
+     height: 60px;
+     margin: 20px 10px;
+     background-color: var(--dark);
+     color: var(--light);
+     font-size: 20px;
+     border: none;
+     border-radius: 5px;
+     box-shadow: var(--shadow);
+     /* outline: inherit; */
+
+}
+
+.formButton:hover{
+    background-color: var(--lessDark);
+    color: var(--light);
+    cursor: pointer;
+}
+
+
+/* P5 CSS */
+
+.tableTitle{
+    justify-content: left;
+    display: flex;
+    margin: 0px 0px 20px 0px;
+}
+
+th{
+    text-align: left;
+}
+
+td{
+    font-size: .9rem;
+}
+
+tr:nth-of-type(2n){
+    background-color: var(--primary)
+}
+
+#visitorsTable {
+	/* border: black solid 2px; */
+	padding: 20px;
+	background-color: #ccc;
+	border-radius: 15px;
+}
+
+#newVisitorButton{
+    align-self: baseline;
+    display: block;
+    color: var(--primary);
+    background-color: var(--dark);
+    /* background-color: var(--lessDark); */
+    margin: 15px 0px;
+}
+#newVisitorButton:hover{
+    color: var(--dark);
+    background-color: var(--primary);
+    /* background-color: var(--lessDark); */
+}
+
+#visitorsContainer{
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: center;
+    margin: 0px 25px 50px 25px;
+}
+
+.actionDiv{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px){
+    
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "footer"
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        list-style: none;
+        justify-content: left;
+        margin: 10px;
+    }
+}
