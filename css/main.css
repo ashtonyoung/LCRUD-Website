@@ -504,6 +504,7 @@ textarea {
 
 th{
     text-align: left;
+    line-height: 2;
 }
 
 td{
@@ -512,6 +513,10 @@ td{
 
 tr:nth-of-type(2n){
     background-color: var(--primary)
+}
+
+tr{
+    line-height: 2;
 }
 
 #visitorsTable {

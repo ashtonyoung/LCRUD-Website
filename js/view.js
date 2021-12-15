@@ -3,7 +3,7 @@ function renderTable(containerId, visitors) {
     if (visitors.length == 0){
         $("#visitorsTable").html("<tr><th>No Logged Visitors</th></tr>")
     } else {
-        $("#visitorsTable").html("<tr><th>Name</th><th>Address</th><th>Phone</th><th>Email</th><th id=\"idColumn\">ID</th><th>Actions</th>")
+        $("#visitorsTable").html("<tr><th>Name</th><th>Address</th><th>Phone</th><th>Email</th><th id=idColumn>ID</th><th>Actions</th>")
     
         for (let visitor of visitors) {
             let id = visitor.getId()
@@ -13,7 +13,7 @@ function renderTable(containerId, visitors) {
             <td>${visitor.phone}</td>
             <td>${visitor.email}</td>
             <td hidden>${id}</td>
-            <td><div class="actionDiv" id=visitor${id}><i class="fas fa-trash-alt"></i></div></td>`
+            <td class="actionDiv" id=visitor${id}><i class="fas fa-trash-alt"></i></td>`
 
             let $tr = $(`<tr id=visitorRow${id}>`)
             $tr.html(html)

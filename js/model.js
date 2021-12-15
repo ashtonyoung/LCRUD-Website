@@ -39,9 +39,6 @@ function modelAddVisitor(visitor){
     visitors.push(newVisitor)
 }
 
-// function modelConfirmDelete(id) {
-
-// }
 
 function modelDeleteVisitor(id){
     let index = findVisitorIndex(id)

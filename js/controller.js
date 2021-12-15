@@ -98,5 +98,6 @@ $(function() {
         event.stopPropagation()
         clearForm()
         showVisitors()
+        $(".errorMsg").hide()
     })
 })
